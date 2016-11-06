@@ -14,7 +14,7 @@ def horus_api():
 
 
 @app.route('/api/post/<slug>', methods=["GET", "DELETE", "PUT"])
-def horus_post():
+def horus_post(slug):
     """Get existing post, DELETE existing post, update existing post"""
     return 200
 
