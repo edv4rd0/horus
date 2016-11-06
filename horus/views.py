@@ -16,11 +16,12 @@ def horus_api():
 @app.route('/api/post/<slug>', methods=["GET", "DELETE", "PUT"])
 def horus_post(slug):
     """Get existing post, DELETE existing post, update existing post"""
-    return 200
+    return make_response(slug)
+
 
 @app.route('/api/post', methods=["POST"])
 def horus_post_create():
-    return 200
+    return "Hmm", 200
 
 
 @app.route('/api/posts/', methods=["GET"])
