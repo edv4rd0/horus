@@ -1,12 +1,6 @@
-from flask import (Flask, request, g, jsonify, session)
+from flask import Flask
 
 app = Flask(__name__)
 
-
-
-@app.route('/api/')
-def horus_api():
-    result = {"code": 200,
-              "message": "Horus Blog API",
-              }
-    return jsonify(result), 200
+import horus.models
+import horus.views
